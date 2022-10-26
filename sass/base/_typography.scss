@@ -8,6 +8,7 @@ body{
     line-height: 1.7;
  
     color: $color-grey-dark;
+    // before was grey
     padding: 3rem;
 
     box-sizing: border-box;
@@ -89,7 +90,7 @@ body{
 
     &:hover{
         transform: skewY(2deg) skewX(13deg) scale(1.1); 
-        text-shadow: .5rem 1rem 1rem rgba($color-black, .2);
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
         //x-direction rem, y-direction 1rem
         //2 rem is 20pixels of blur 
     }

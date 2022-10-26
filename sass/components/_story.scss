@@ -24,6 +24,7 @@
 
         clip-path:  circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
+        position: relative;
 
 // because that means that is the center of the circle so exactly the center horizontally and vertically
 
@@ -31,6 +32,9 @@
     
 &__img{
     height: 100%;
+    transform: translateX(-3.5rem) scale(1.4);
+    backface-visibility: hidden;
+    transition: all .3s ease-in-out;
 
     // so if we say height 100%, that will be the hundred percent of the parent
 
@@ -41,5 +45,31 @@
 
 }
 
+&__caption{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    backface-visibility: hidden;
+    // it prevents tremble
 
+}
+
+&:hover &__caption{
+    opacity: 1;
+    transform: translate(-50%, -50%);
+
+}
+
+&:hover &__img{
+    transform: translateX(-3.5rem) scale(1);
+    filter: blur(3px) brightness(80%);
+
+}
 }
