@@ -11,10 +11,43 @@
 html{
 
     //This defines what 1rem is
-    font-size:  62.5%;
+    font-size:  62.5%; //1rem = 10px; 10/16 = 62.5%
 
     // font-size:  84.5%;
 
+
+    @include respond(tab-land){ //width<1200
+        font-size: 56.25%; // 1rem = 9px, 9/16 = 50%
+    }
+
+    @include respond(phone){
+        font-size: 30%;  //1rem = 4.8px
+    }
+    @include respond(tab-port){ //width<900?
+        font-size: 50%;  //1rem = 8px, 8/16 = 50%
+    }
+
+  
+    @include respond(big-desktop){
+        font-size: 75%; //1rem = 12, 12/16
+    }
+
+
+    // rem.
+
+    // I told you that by using rem, we will make the entire layout
+    
+    // of the webpage dependent on the font size,
+    
+    // and that's a good thing because now, in responsive design,
+    
+    // we can simply change the font size here
+    
+    // and then all of these measurements in rem, all of them
+    
+    // will scale up or down according to this font size.
+    
+    
 
 }
 
@@ -26,3 +59,5 @@ body{
     box-sizing: border-box;
 
 }
+
+
